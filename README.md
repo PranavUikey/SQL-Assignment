@@ -33,7 +33,7 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 | cogs                    | Cost Of Goods sold                      | DECIMAL(10, 2) |
 | gross_margin_percentage | Gross margin percentage                 | FLOAT(11, 9)   |
 | gross_income            | Gross Income                            | DECIMAL(10, 2) |
-| rating                  | Rating                                  | FLOAT(2, 1)    |
+| rating                  | Rating                                  | DECIMAL(3,1)   |
 
 ### Analysis List
 
@@ -169,6 +169,15 @@ CREATE TABLE IF NOT EXISTS sales(
     cogs DECIMAL(10,2) NOT NULL,
     gross_margin_pct FLOAT(11,9),
     gross_income DECIMAL(12, 4),
-    rating FLOAT(2, 1)
+    rating DECIMAL(3,1)
 );
+
+
+-- upload the csv file to _secure_file_prev location (i.e- C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/) directory.
+LOAD DATA  INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/walmart_dataset.csv' INTO TABLE sales FIELDS TERMINATED BY ',' ENCLOSED BY '"' IGNORE 1 ROWS;
+
+
+-- Answer the above questions after this.
+  
 ```
+## All the best
