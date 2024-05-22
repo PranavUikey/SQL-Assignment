@@ -1,4 +1,4 @@
-# SQL-Assignment
+# SQL-Assignment1
 SQL Assignment for aiadventures Students
 
 ## About
